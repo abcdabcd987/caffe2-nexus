@@ -652,11 +652,11 @@ class ConvPoolOpBase : public Operator<Context> {
             "This should never happen. If this happens, double check the logic "
             "above.");
         if (*out_size > standard_out_size) {
-          LOG(WARNING)
+          /* LOG(WARNING)
               << "You are hitting a case where Caffe's legacy padding calculation "
                  "is hit. This leads to inefficient and sometimes incorrect "
                  "results. We are keeping this behavior for backward compatibility"
-                 ", but you are strongly recommended to move away from it.";
+                 ", but you are strongly recommended to move away from it."; */
         }
         *pad_tail = *pad_head + stride * (*out_size - standard_out_size);
         break;
